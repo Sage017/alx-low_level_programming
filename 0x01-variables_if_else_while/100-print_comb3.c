@@ -10,20 +10,20 @@ int main(void)
 	int a;
 	int b;
 
-	a = 48;
-	while (a <= 57)
+	a = '0';
+	while (a <= '9')
 	{
-		b = 48;
-		while (b <= 57)
+		b = '0';
+		while (b <= '9')
 		{
 			if (!(a >= b))
 			{
 				putchar(a);
 				putchar(b);
-				if (a != 8 && b != 9 && a != b)
+				if (a != '8')
 				{
-					putchar(44);
-					putchar(32);
+					putchar(',');
+					putchar(' ');
 				}
 			}
 			b++;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints out the smallest combination with three digits
+ * main - Prints out the smallest combination with four digits
  *
  * Return: 0 for success
  */
@@ -10,6 +10,7 @@ int main(void)
 	int a;
 	int b;
 	int c;
+	int d;
 
 	a = '0';
 	while (a <= '9')
@@ -20,17 +21,23 @@ int main(void)
 			c = '0';
 			while (c <= '9')
 			{
-				if ((a < b && b < c && a < c)
-				    && (a != b && b != c && a != c))
+				d = '0';
+				while (d <= '9')
 				{
-					putchar(a);
-					putchar(b);
-					putchar(c);
-					if (a != '7')
+					if ((a + b) < (c + d))
 					{
-						putchar(',');
+						putchar(a);
+						putchar(b);
 						putchar(' ');
+						putchar(c);
+						putchar(d);
+						if ((a + b) != ('9' + '8'))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
+					d++;
 				}
 				c++;
 			}
