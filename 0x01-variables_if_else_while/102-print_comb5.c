@@ -9,37 +9,25 @@ int main(void)
 {
 	int a;
 	int b;
-	int c;
-	int d;
 
-	a = '0';
-	while (a <= '9')
+	a = 0;
+	while (a <= 99)
 	{
-		b = '0';
-		while (b <= '9')
+		b = 0;
+		while (b <= 99)
 		{
-			c = '0';
-			while (c <= '9')
+			if (a < b)
 			{
-				d = '0';
-				while (d <= '9')
+				putchar(a / 10 + '0');
+				putchar(a % 10 + '0');
+				putchar(' ');
+				putchar(b / 10 + '0');
+				putchar(b % 10 + '0');
+				if (a != 98)
 				{
-					if ((a + b) < (c + d))
-					{
-						putchar(a);
-						putchar(b);
-						putchar(' ');
-						putchar(c);
-						putchar(d);
-						if ((a + b) != ('9' + '8'))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-					d++;
+					putchar(',');
+					putchar(' ');
 				}
-				c++;
 			}
 			b++;
 		}
