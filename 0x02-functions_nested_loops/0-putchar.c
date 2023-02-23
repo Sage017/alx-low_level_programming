@@ -11,7 +11,7 @@ int main(void)
 	char put[] = "_putchar\n";
 	int i = 0;
 
-	while (i < strlen(put))
+	while (i < (int)strlen(put))
 	{
 		_putchar(put[i]);
 		i++;
